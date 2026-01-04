@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Obiorah Bright Ifenna</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            padding: 40px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 8px;
+        }
+
+        .header h2 {
+            font-size: 22px;
+            font-weight: 300;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            font-size: 14px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .content {
+            padding: 40px;
+        }
+
+        .section {
+            margin-bottom: 35px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            color: #1e40af;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 3px solid #2563eb;
+        }
+
+        .summary {
+            text-align: justify;
+            line-height: 1.8;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .skill-category h4 {
+            color: #1e40af;
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .skill-category p {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .job {
+            margin-bottom: 25px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+
+        .job-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .company {
+            color: #2563eb;
+            font-weight: 500;
+            font-size: 15px;
+        }
+
+        .date {
+            color: #666;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        .job ul {
+            margin-left: 35px;
+            margin-top: 8px;
+        }
+
+        .job li {
+            margin-bottom: 6px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .project {
+            margin-bottom: 25px;
+            border-left: 4px solid #2563eb;
+            padding-left: 20px;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .project-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .project-description {
+            margin-bottom: 8px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .project ul {
+            margin-left: 20px;
+        }
+
+        .project li {
+            font-size: 13px;
+            margin-bottom: 4px;
+            color: #555;
+        }
+
+        .competencies-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .competency {
+            background: #eff6ff;
+            padding: 12px;
+            text-align: center;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .additional-info ul {
+            margin-left: 25px;
+        }
+
+        .additional-info li {
+            margin-bottom: 8px;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .footer {
+            background: #f3f4f6;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            font-size: 13px;
+        }
+
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .print-button:hover {
+            background: #1e40af;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+
+            .print-button {
+                display: none;
+            }
+
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .competencies-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .header {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <button class="print-button" onclick="window.print()">📄 Download/Print PDF</button> -->
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Obiorah Bright Ifenna</h1>
+            <h2>Senior Web Developer</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span></span>
+                    <span>obiorahbrightifenna@gmail.com</span>
+                </div>
+                <div class="contact-item">
+                    <span></span>
+                    <span>07065199503</span>
+                </div>
+                <div class="contact-item">
+                    <span></span>
+                    <span>swinotech.com</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Professional Summary -->
+            <div class="section">
+                <h3 class="section-title">Professional Summary</h3>
+                <p class="summary">
+                    Results-driven Senior Web Developer with 8+ years of comprehensive experience in full-stack
+                    development,
+                    specializing in modern web technologies and e-commerce solutions. Proven track record of delivering
+                    high-performance applications using Laravel, Next.js, Vue.js, and the MERN stack. Expert in SEO
+                    optimization,
+                    having consistently achieved first-page Google rankings for client websites. Founder and lead
+                    developer at
+                    Swinotech, a web development agency focused on delivering scalable, user-centric digital solutions.
+                    Adept
+                    at working both independently and as part of collaborative teams to build innovative web
+                    applications that
+                    drive business growth.
+                </p>
+            </div>
+
+            <!-- Technical Skills -->
+            <div class="section">
+                <h3 class="section-title">Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h4>Frontend Development</h4>
+                        <p>React, Next.js, Vue.js, Angular, Tailwind CSS, CSS3, HTML5, Responsive Design</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Backend Development</h4>
+                        <p>Node.js, Express.js, Laravel, PHP, RESTful APIs, API Integration</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Database Management</h4>
+                        <p>MongoDB, MySQL, Database Design, Query Optimization</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>CMS & E-commerce</h4>
+                        <p>WordPress, Shopify, WooCommerce, Custom E-commerce Solutions</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Tools & Technologies</h4>
+                        <p>Postman, Git, GitHub, Agile Methodology, DevOps Basics</p>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Specializations</h4>
+                        <p>SEO Optimization, Graphic Design, UI/UX Implementation, Performance Optimization</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Experience -->
+            <div class="section">
+                <h3 class="section-title">Professional Experience</h3>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Full-Stack Developer</div>
+                            <div class="company">Lovistry</div>
+                        </div>
+                        <div class="date">2025</div>
+                    </div>
+                    <ul>
+                        <li>Architected and developed a comprehensive dating application from the ground up using
+                            Next.js</li>
+                        <li>Implemented real-time messaging features and user matching algorithms</li>
+                        <li>Designed and built responsive UI components ensuring seamless user experience across devices
+                        </li>
+                        <li>Integrated secure authentication systems and user profile management features</li>
+                        <li>Optimized application performance and implemented best practices for scalability</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Frontend Developer</div>
+                            <div class="company">Anchor Credit Loan Company</div>
+                        </div>
+                        <div class="date">2025</div>
+                    </div>
+                    <ul>
+                        <li>Developed the entire frontend interface for a financial loan platform using Vue.js and
+                            Tailwind CSS</li>
+                        <li>Created intuitive user dashboards for loan application tracking and management</li>
+                        <li>Implemented responsive design patterns ensuring accessibility across all devices</li>
+                        <li>Collaborated with backend team to integrate RESTful APIs for seamless data flow</li>
+                        <li>Ensured compliance with financial industry UI/UX best practices</li>
+                    </ul>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <div class="job-title">Founder & Lead Developer</div>
+                            <div class="company">Swinotech Web Agency</div>
+                        </div>
+                        <div class="date">2018 - Present</div>
+                    </div>
+                    <ul>
+                        <li>Founded and manage a successful web development agency specializing in custom web solutions
+                        </li>
+                        <li>Lead development teams in delivering high-quality projects for diverse clients</li>
+                        <li>Provide strategic consulting on web architecture, SEO, and digital marketing</li>
+                        <li>Manage client relationships, project timelines, and technical requirements</li>
+                        <li>Maintain and enhance agency website at swinotech.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Key Projects -->
+            <div class="section">
+                <h3 class="section-title">Key Projects</h3>
+
+                <div class="project">
+                    <div class="project-header">
+                        <div class="project-title">Bumsem Alumni Voting Application</div>
+                        <div class="date">2024</div>
+                    </div>
+                    <p class="project-description">
+                        Developed a secure, scalable voting application for alumni general elections
+                    </p>
+                    <ul>
+                        <li>Built real-time vote counting and results display system</li>
+                        <li>Implemented secure authentication and voter verification mechanisms</li>
+                        <li>Ensured system integrity and prevented duplicate voting</li>
+                        <li>Successfully handled high concurrent user traffic during election period</li>
+                    </ul>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <div class="project-title">Reliance E-commerce Platform (MERN Stack)</div>
+                        <div class="date">2022</div>
+                    </div>
+                    <p class="project-description">
+                        Full-stack e-commerce solution for a Cameroonian company using MongoDB, Express.js, React, and
+                        Node.js
+                    </p>
+                    <ul>
+                        <li>Developed complete product catalog management system</li>
+                        <li>Integrated secure payment gateway and order processing workflow</li>
+                        <li>Built admin dashboard for inventory and sales management</li>
+                        <li>Implemented shopping cart, wishlist, and user account features</li>
+                    </ul>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <div class="project-title">Muxo.ca E-commerce Website</div>
+                        <div class="date">2021</div>
+                    </div>
+                    <p class="project-description">
+                        Full-featured e-commerce platform built with Laravel and Vue.js
+                    </p>
+                    <ul>
+                        <li>Developed dynamic product filtering and search functionality</li>
+                        <li>Created seamless checkout experience with multiple payment options</li>
+                        <li>Implemented user authentication and order tracking systems</li>
+                        <li>Built responsive interface ensuring optimal mobile shopping experience</li>
+                    </ul>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <div class="project-title">Ezeogidi Motors E-commerce Platform</div>
+                        <div class="date">2020</div>
+                    </div>
+                    <p class="project-description">
+                        Custom e-commerce solution built with PHP, Laravel, Tailwind CSS, and CSS
+                    </p>
+                    <ul>
+                        <li>Developed automotive parts catalog with advanced filtering options</li>
+                        <li>Integrated inventory management and order processing systems</li>
+                        <li>Implemented customer account management and order history tracking</li>
+                        <li>Created mobile-responsive design for enhanced user accessibility</li>
+                    </ul>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <div class="project-title">Geoelis Cables Website</div>
+                        <div class="date">2019</div>
+                    </div>
+                    <p class="project-description">
+                        WordPress website with comprehensive SEO optimization
+                    </p>
+                    <ul>
+                        <li>Implemented advanced on-page and technical SEO strategies</li>
+                        <li>Optimized site structure and content for search engine visibility</li>
+                        <li>Achieved significant improvement in organic search rankings</li>
+                        <li>Enhanced site speed and mobile responsiveness</li>
+                    </ul>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <div class="project-title">Cutixplc Corporate Website</div>
+                        <div class="date">2018</div>
+                    </div>
+                    <p class="project-description">
+                        WordPress website with exceptional SEO performance
+                    </p>
+                    <ul>
+                        <li>Achieved first-page Google rankings through strategic SEO implementation</li>
+                        <li>Optimized content for multiple search engines beyond Google</li>
+                        <li>Implemented schema markup and local SEO best practices</li>
+                        <li>Created engaging, conversion-focused landing pages</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Core Competencies -->
+            <div class="section">
+                <h3 class="section-title">Core Competencies</h3>
+                <div class="competencies-grid">
+                    <div class="competency">Full-Stack Development</div>
+                    <div class="competency">E-commerce Solutions</div>
+                    <div class="competency">SEO Optimization</div>
+                    <div class="competency">Responsive Web Design</div>
+                    <div class="competency">API Development & Integration</div>
+                    <div class="competency">Database Architecture</div>
+                    <div class="competency">Team Collaboration</div>
+                    <div class="competency">Project Management</div>
+                    <div class="competency">UI/UX Implementation</div>
+                    <div class="competency">Performance Optimization</div>
+                    <div class="competency">Graphic Design</div>
+                    <div class="competency">Client Relations</div>
+                </div>
+            </div>
+
+            <!-- Additional Information -->
+            <div class="section additional-info">
+                <h3 class="section-title">Additional Information</h3>
+                <ul>
+                    <li>Experienced in working with remote and distributed teams</li>
+                    <li>Strong understanding of modern web development best practices and design patterns</li>
+                    <li>Proven ability to manage multiple projects simultaneously while meeting deadlines</li>
+                    <li>Continuous learner staying updated with latest web technologies and industry trends</li>
+                    <li>Excellent problem-solving skills and attention to detail</li>
+                    <li>Strong communication skills with ability to explain technical concepts to non-technical
+                        stakeholders</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            References available upon request
+        </div>
+    </div>
+</body>
+
+</html>
