@@ -5,7 +5,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
-import project1 from "../../public/images/projects/Project-1.PNG"
+import project1 from "../../public/images/projects/Project-1.png"
 import project2 from "../../public/images/projects/reliance.png"
 import project3 from "../../public/images/projects/lovistry.png"
 import project4 from "../../public/images/projects/fashion-studio-website.jpg"
